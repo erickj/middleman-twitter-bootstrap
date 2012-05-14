@@ -54,17 +54,17 @@
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def copyright_years(start_year=nil)
-    return Date.today.year unless start_year
-    
-    end_year = Date.today.year
-    if start_year == end_year
-      start_year.to_s
-    else
-      start_year.to_s + '-' + end_year.to_s
-    end
+  def site_title
+    "Twitter Bootstrap, for Middleman"
+  end
+
+  def logo
+    "@middleman"
   end
 end
+
+require "./lib/site_helpers"
+helpers SiteHelpers
 
 # Change the CSS directory
 # set :css_dir, "alternative_css_directory"
