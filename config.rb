@@ -66,6 +66,9 @@ end
 require "./lib/site_helpers"
 helpers SiteHelpers
 
+require "./lib/extensions/scss_reroute"
+activate :scss_reroute
+
 # Change the CSS directory
 # set :css_dir, "alternative_css_directory"
 
